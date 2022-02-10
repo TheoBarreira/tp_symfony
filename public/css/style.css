@@ -1,0 +1,91 @@
+/* **************************************** GLOBAL **************************************** */
+
+    :root {
+        --color-blue: #4169e1;
+        --color-white: #FFFFFF;
+        --color-black: #000000;
+    }
+
+    body {
+        background-color: var(--color-black);
+    }
+
+    * {
+        font-weight: lighter;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    a {
+        color: var(--color-white);
+    }
+
+    a:hover {
+        color: var(--color-blue);
+    }
+
+/* **************************************** BASE - FOOTER **************************************** */
+
+    #footer {
+        color: #FFFFFF;
+    }
+
+    #copyright {
+        font-size: 0.75em;
+    }
+
+
+/* **************************************** HOME - HEADER **************************************** */
+
+    #header-img {
+        width: 100%;
+        height: 50vh;
+        background-image: url('../img/header.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #home-header h1,
+    #home-header h2 {
+        position: absolute;
+        top: 20%;
+        right: 32%;
+        width: 100%;
+        text-align: center;
+        font-weight: lighter;
+        color: #FFFFFF;
+    }
+
+    #home-header h1 {
+        font-size: 7vh;
+    }
+    #home-header h2 {
+        top: 27%;
+        right: 32%;
+        font-size: 5vh;
+    }
+
+/* **************************************** HOME - BODY **************************************** */
+
+    #projet-text {
+        color: var(--color-white);
+    }
+
+    #card-text {
+        color: var(--color-black);
+    }
+
+    #competence-text {
+        color: var(--color-white);
+    }
+
+    #competence-image {
+        max-width: 3%;
+        height: auto;
+    }
+    
+    #presentation-text {
+        color: var(--color-white);
+    }
+

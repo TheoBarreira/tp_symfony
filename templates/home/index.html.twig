@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Théo Barreira{% endblock %}
+
+{% block body %}
+
+    <header id="home-header">
+        <div id="header-img"></div>
+        <h1>THÉO BARREIRA</h1>
+        <h2>PORTOFOLIO</h2>
+    </header>
+
+    <main class="container-fluid p-5">
+        <div class="row" id="projet-text">
+            <h1>Projet</h1>
+            {% for project in projet %}
+                    <div class="col-4 p-3">
+                        <div class="card">
+                            <img src="{{ asset('img/' ~ project.imgProject) }}" class="card-img-top" alt="photo projet">
+                            <div class="card-body"  id="card-text">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description|u.truncate(90, '...', false) }}</p>
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+        </div>
+        <hr size="20">
+        <div class="container-fluid" id="competence-text">
+            <div class="row">
+                <div class="col-12 my-auto">
+                    <h1>Compétence</h1>
+                </div>
+                <div class="col-10 col-md-6 offset-md-0 ">
+                    <h3 class="pb-3">Technologies</h3>
+                    <div class="dropdown-divider"></div>
+                    <p><img src="img/competence/HTML.jpg" id="competence-image" alt="logo HTML"> - HTML</p>
+                    <p><img src="img/competence/CSS.jpg" id="competence-image" alt="logo CSS"> - CSS</p>
+                    <p><img src="img/competence/PHP.jpg" id="competence-image" alt="logo PHP"> - PHP</p>
+                    <p><img src="img/competence/JavaScript.jpg" id="competence-image" alt="logo JavaScript"> - JavaScript</p>
+                    <p><img src="img/competence/MySQL.jpg" id="competence-image" alt="logo MySQL"> - MySQL</p>
+                </div>
+                <div class="col-10 col-md-6 offset-md-0">
+                    <h3 class="pb-3">Frameworks / bibliothèques</h3>
+                    <div class="dropdown-divider"></div>
+                    <p><img src="img/competence/Symfony.jpg" id="competence-image" alt="logo Symfony"> - Symfony</p>
+                    <p><img src="img/competence/Bootstrap.jpg" id="competence-image" alt="logo Bootstrap"> - Bootstrap</p>
+                    <p><img src="img/competence/FontAwesome.jpg" id="competence-image" alt="logo FontAwesome"> - FontAwesome</p>
+                    <p><img src="img/competence/Twig.jpg" id="competence-image" alt="logo Twig"> - Twig</p>
+                </div>
+            </div>
+        </div>
+        <hr size="20">
+        <div class="row">
+            <div class="col-8" id="presentation-text">
+                <h1>Présentation</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, obcaecati non voluptate repellendus quis voluptates quasi corrupti rem ab. Eum earum beatae officia reprehenderit alias eveniet eos a fugit dicta.
+                    Dicta perspiciatis, laboriosam maiores officia nihil, fugiat labore ipsum quae numquam inventore voluptatem a enim unde quod dolor velit totam magnam veritatis? Architecto enim rem unde ut consequatur incidunt dignissimos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum error voluptate fugiat, deleniti dolorem maxime tenetur minima voluptas doloribus dolores. Perspiciatis corrupti esse quidem eum tempore sint, error blanditiis vel?
+                        Quasi officia maxime, perferendis cum nemo neque cupiditate ipsa accusamus placeat repudiandae exercitationem quidem eos harum sequi modi, perspiciatis temporibus ratione aut, aliquam eius. Adipisci minima distinctio ex deserunt explicabo!
+                        Esse, a aliquid optio, vitae voluptatum totam et cupiditate maiores laudantium vero vel officiis non inventore, voluptas debitis fugit facilis mollitia perspiciatis iusto modi velit quaerat nesciunt quis soluta? Assumenda!</p>
+                    </div>
+            <div class="col-2 offset-1" id="profil">
+                <img src="../img/profil.jpg" alt="photo Théo Barreira" class="w-100">
+            </div>
+        </div>
+        <hr size="20">
+    </main>
+{% endblock %}
