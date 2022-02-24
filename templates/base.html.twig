@@ -23,13 +23,15 @@
     </head>
 
     <body>
-        <div class="text-center">
-            <div class="col-12">
-                <a href="#projet-text">projet</a>
-                <a href="#competence-text">compétence</a>
-                <a href="#presentation-text">présentation</a>
-                <a href="#">contact</a>
-            </div>
+        <div class="navigation">
+            <ul>
+                <li><a class="active" href="{{ path('home') }}">Accueil</a></li>
+                <li><a href="#projet-text">Projet</a></li>
+                <li><a href="#competence-text">Compétence</a></li>
+                <li><a href="#presentation-text">Présentation</a></li>
+                <li style="float:right"><a href="{{ path('contact') }}">Contact</a></li>
+            </ul>
+            <br><br>
         </div>
         {% block body %}{% endblock %}
 
@@ -38,10 +40,11 @@
                 <div class="col-4">
                     <h5>LIENS</h5>
                     <div class="dropdown-divider"></div>
+                    <a href="{{ path('home') }}">accueil</a>
                     <a href="#projet-text">projet</a>
-                    <a href="#comptence-text">compétence</a>
+                    <a href="#competence-text">compétence</a>
                     <a href="#presentation-text">présentation</a>
-                    <a href="#">contact</a>
+                    <a href="{{ path('contact') }}">contact</a>
                 </div>
                 <div class="col-4 my-auto">
                     <img src="../img/logo.jpg" alt="logo DEVELOPPEUR" class="w-50">
